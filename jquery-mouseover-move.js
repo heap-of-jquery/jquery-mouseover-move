@@ -99,7 +99,7 @@ limitations under the License.
 		} else if ( typeof method === 'object' || ! method ) {
 			return methods.create.apply( this, arguments );
 		} else {
-			$.error( 'Method ' +  method + ' does not exist on jQuery.mouseoverMove );
+			$.error( 'Method ' +  method + ' does not exist on jQuery.mouseoverMove ' );
 		}   
 	};
 })(jQuery);
