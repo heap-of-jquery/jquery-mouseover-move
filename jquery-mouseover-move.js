@@ -40,7 +40,7 @@ limitations under the License.
 				$floaty.css({
 					right: 'auto',
 					left: offsets.left
-				}).animate({
+				}).stop().animate({
 					left: settings.side
 				}, settings.speed, function() {
 					// clear animate status
@@ -55,7 +55,7 @@ limitations under the License.
 				$floaty.css({
 					left: 'auto', 
 					right: rt
-				}).animate({
+				}).stop().animate({
 					right: settings.side
 				}, settings.speed, function() {
 					settings.animating = false;
