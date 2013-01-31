@@ -28,6 +28,12 @@ limitations under the License.
 		if(settings.frozen)
 			return false;
 
+		if(settings.animating)
+			return false;
+
+		settings.animating = true;
+		$floaty.data("floaty", settings);
+
 		var offsets = $floaty.offset();
 		switch(_to) {
 			case "left":
@@ -36,17 +42,25 @@ limitations under the License.
 					left: offsets.left
 				}).animate({
 					left: settings.side
-				}, settings.speed).removeClass("right").addClass("left");
+				}, settings.speed, function() {
+					// clear animate status
+					settings.animating = false;
+					$floaty.data("floaty", settings);
+				}).removeClass("right").addClass("left");
 			break;
 	
 			case "right":
 				var rt = ($(window).width() - (offsets.left + $floaty.outerWidth()));
+
 				$floaty.css({
 					left: 'auto', 
 					right: rt
 				}).animate({
 					right: settings.side
-				}, settings.speed).removeClass("left").addClass("right");
+				}, settings.speed, function() {
+					settings.animating = false;
+					$floaty.data("floaty", settings);
+				}).removeClass("left").addClass("right");
 			break;
 		}
 	};
