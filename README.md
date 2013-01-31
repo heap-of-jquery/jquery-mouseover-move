@@ -22,7 +22,8 @@ jQuery Mouseover Move is a jQuery plugin which allows you to have elements which
 
 ## Screenshots
 
-![Example](http://i.imgur.com/GGVk0J5.jpg)
+![Example](http://i.imgur.com/9wJPoQN.gif)
+
 
 ## Known Issues
 
