@@ -83,7 +83,7 @@ limitations under the License.
 			});
 		
 			var cssSettings = {
-				position: 'absolute',
+				position: 'fixed',
 				bottom: settings.bottom
 			};
 			cssSettings[settings.start] = settings.side;
