@@ -22,7 +22,9 @@ jQuery Mouseover Move is a jQuery plugin which allows you to have elements which
 
 ## Screenshots
 
-Coming soon.
+![Example](http://i.imgur.com/9wJPoQN.gif)
+
+*Upon hover, the box slides to the other side of the screen. Magic!*
 
 ## Known Issues
 
